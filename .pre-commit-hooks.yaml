@@ -1,0 +1,6 @@
+- id: header
+  name: header
+  description: Corrects headers of files based on a provided template
+  entry: header
+  language: python
+  type: [python]
