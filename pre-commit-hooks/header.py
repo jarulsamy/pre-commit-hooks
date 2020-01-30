@@ -51,7 +51,6 @@ def valid_percent_format(text, formats):
 
 
 def check_header(f, config: list):
-    # first_four_lines = []
     SUCCESS = []
     WARNING = []
     FAIL = []
@@ -91,9 +90,8 @@ def main(argv=None):
             file_ret, results = check_header(f, config)
             retv |= file_ret
             if file_ret:
-                print(
-                    f"{filename}: {len(results[2])} Error(s), {len(results[1])} Warning(s)."
-                )
+                print(f"{filename}: {len(results[2])} Error(s)", end="")
+                print(f"{len(results[1])} Warning(s).")
                 if len(results[2]) > 0:
                     print("Errors:")
                     for i in results[2]:
